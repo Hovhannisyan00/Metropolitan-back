@@ -1,0 +1,24 @@
+Metropolitan Museum of Art API Project
+This project leverages the Metropolitan Museum of Art Collection API to enable users to search for and explore artworks from the museum's vast collection, spanning over 470,000 artworks across 19 departments.
+
+Features
+Department Search: Users can select a department from the museum’s collection, such as "Ancient Near Eastern Art" or "Egyptian Art".
+Artwork Search: Users can search for artworks by title or keyword within a specific department.
+Display Results: The application displays the first 10 search results with the artwork’s title.
+API Endpoints Used
+List Departments
+Endpoint: GET https://collectionapi.metmuseum.org/public/collection/v1/departments
+Provides a list of departments available in the museum’s collection.
+Search for Artworks
+Endpoint: GET https://collectionapi.metmuseum.org/public/collection/v1/search?q={searchTerm}
+Allows searching for objects by title or keyword.
+Fetch Artwork Details
+Endpoint: GET https://collectionapi.metmuseum.org/public/collection/v1/objects/{objectID}
+Retrieves specific details of an artwork using its unique object ID.
+Setup and Usage
+Clone the repository.
+Install dependencies (if applicable).
+Run the application.
+Access the API documentation to understand the endpoints better: Metropolitan Museum of Art API Documentation.
+Example Use Case
+To test the search functionality, try searching for "cylinder" in the "Ancient Near Eastern Art" department. The application will display the first 10 matching results with their titles.
