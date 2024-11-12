@@ -32,7 +32,6 @@ export class AppService {
       }
       const data = await response.json();
       if (!data.objectIDs || data.objectIDs.length === 0) {
-        console.log('No data found');
         return { message: 'No data found', data: null };
       }
 
@@ -58,7 +57,6 @@ export class AppService {
             repository: item.repository,
             objectURL: item.objectURL,
           }));
-          console.log('Fetch successful');
           return filteredData;
         } catch (error) {
           console.error('Error fetching object details:', error);

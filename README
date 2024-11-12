@@ -1,67 +1,26 @@
-Metropolitan Museum of Art API Project
-This project leverages the Metropolitan Museum of Art Collection API to enable users to search for and explore artworks from the museum's vast collection, which includes over 470,000 works of art spanning 19 departments.
+Shopping Mall API
+This is a simple project for managing products in a shopping mall. It does not require a database. You can easily perform CRUD operations without any validation.
 
 Features
-Metropolitan Museum of Art API
-Department Search: Allows users to search and select from various departments such as "Ancient Near Eastern Art" or "Egyptian Art".
-Artwork Search: Enables users to search for artworks by title or keyword within a selected department.
-Display Results: Displays the first 10 search results, showcasing the artwork's title.
-API Endpoints
-The application interacts with the following Metropolitan Museum of Art Collection API endpoints:
-
-1. List Departments
-Endpoint: GET https://collectionapi.metmuseum.org/public/collection/v1/departments
-Provides a list of all departments in the museum's collection.
-2. Search for Artworks
-Endpoint: GET https://collectionapi.metmuseum.org/public/collection/v1/search?q={searchTerm}
-Allows searching for artworks by title or keyword.
-3. Fetch Artwork Details
-Endpoint: GET https://collectionapi.metmuseum.org/public/collection/v1/objects/{objectID}
-Retrieves specific details about an artwork using its unique objectID.
-Requirements
-Node.js: Ensure Node.js is installed on your machine. Download it from nodejs.org.
-npm: Used for managing dependencies.
-Setup & Usage
-1. Clone the repository
-Clone this repository to your local machine:
+Random CRUD Operations: You can create, read, update, and delete products without any restrictions.
+Uncategorized Products: Products are not linked to any categories.
+No SKU Validation: Products can have any SKU length.
+Setup
+Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/Hovhannisyan00/Metropolitan-back.git
-2. Install dependencies
-Navigate to the project directory and install the required dependencies:
+git clone https://github.com/your-username/shopping-mall-api.git
+Install dependencies:
 
 bash
 Copy code
-cd Metropolitan-back
 npm install
-3. Run the application
-Start the application:
+Run the application:
 
 bash
 Copy code
 npm start
-4. Testing the API
-You can test the search functionality using Postman or curl. For example, to search for "cylinder" in the "Ancient Near Eastern Art" department, use the following request:
-
-bash
-Copy code
-GET https://collectionapi.metmuseum.org/public/collection/v1/search?q=cylinder
-5. Example Use Case
-To test the full functionality, you can search for an artwork like "cylinder" within the "Ancient Near Eastern Art" department. The first 10 matching results with their titles will be displayed.
-
-Sample Request/Response for Artwork Search
-Request:
-
-bash
-Copy code
-GET https://collectionapi.metmuseum.org/public/collection/v1/search?q=cylinder
-Response (example):
-
-json
-Copy code
-{
-  "objectIDs": [12345, 67890, 11223],
-  "total": 100,
-  "status": "OK"
-}
+API Endpoints
+GET /products: Get all products (with no categories).
+POST /products: Add a product (no validation on SKU).
