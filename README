@@ -22,3 +22,52 @@ Run the application.
 Access the API documentation to understand the endpoints better: Metropolitan Museum of Art API Documentation.
 Example Use Case
 To test the search functionality, try searching for "cylinder" in the "Ancient Near Eastern Art" department. The application will display the first 10 matching results with their titles.
+
+Shopping Mall API
+This is a REST API for managing a list of products in a shopping mall database. It allows creating, reading, updating, and deleting products. Each product is associated with a single category, which includes a title and description.
+
+Features
+Products CRUD: Perform basic operations (Create, Read, Update, Delete) for products.
+Categories: Predefined test data for categories, with no separate CRUD required.
+Product Details: Each product has a unique SKU, belongs to one category, and can be fetched along with its associated category.
+Database Schema
+Category
+title (string): Title of the category.
+description (string): Description of the category.
+Product
+title (string): Title of the product.
+description (string): Description of the product.
+SKU (string): Unique alphanumeric identifier of exactly 8 characters.
+price (decimal): Price of the product.
+categoryId (reference): Foreign key referencing the category.
+
+Requirements
+SKU Validation: SKU must be unique and exactly 8 characters long.
+
+Setup
+Clone the repository:
+
+bash/zsh
+Copy code
+git clone https://github.com/your-username/shopping-mall-api.git
+Install dependencies:
+
+bash/zsh
+Copy code
+npm install
+Database Setup: Configure the database connection in your .env file.
+
+Run the application:
+
+bash/zsh
+Copy code
+npm start
+Test the API: You can test the API using tools like Postman or curl.
+
+Run the application:
+
+bash/zsh
+Copy code
+npm run start:dev
+Test the API: You can test the API using tools like Postman or curl.
+
